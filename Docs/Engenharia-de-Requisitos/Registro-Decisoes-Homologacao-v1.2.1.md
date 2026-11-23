@@ -159,6 +159,14 @@
 - **Critérios de aceitação propostos:** (1) após redefinição de senha concluída, link anterior de alteração autenticada é rejeitado; (2) após alteração autenticada concluída, link anterior de recuperação é rejeitado; (3) links pendentes de ambos os tipos são invalidados após qualquer mudança efetiva de senha; (4) links emitidos em novas solicitações seguem suas regras próprias de validade e uso único; (5) uma solicitação não concluída não provoca, por esta decisão isoladamente, invalidação cruzada entre tipos de fluxo, preservadas as regras de invalidação de links anteriores do mesmo tipo.
 - **Ponto técnico:** Implementar invalidação de forma atômica à alteração efetiva da credencial e testar concorrência para impedir confirmação tardia de links antigos.
 
+
+## DEC-M01-021 — Ativação de sessão após confirmação de novo dispositivo
+- **Requisitos relacionados:** RF-AUT-011, RF-AUT-012, RF-AUT-013; CA-AUT-011, CA-AUT-012, CA-AUT-013; complementa DEC-M01-008 e DEC-M01-009.
+- **Decisão:** Após o usuário **informar credenciais válidas no novo dispositivo** e **confirmar validamente o link de autorização**, a **nova sessão será ativada sem exigir novo preenchimento de nome de usuário e senha**. A **sessão anterior será revogada no momento da ativação**.
+- **Status:** Confirmada pelo PO; aguardando validação técnica e incorporação à próxima versão da matriz.
+- **Critérios de aceitação propostos:** (1) credenciais inválidas não iniciam fluxo de autorização de novo dispositivo; (2) antes de confirmar o link válido, o novo dispositivo não possui sessão ativa e a sessão anterior continua autorizada; (3) após confirmação válida da solicitação mais recente, o novo dispositivo recebe sessão ativa sem novo preenchimento de credenciais; (4) na mesma transição de ativação, a sessão anterior é revogada, sem duas sessões simultaneamente autorizadas; (5) link expirado, reutilizado ou de solicitação invalidada não ativa sessão.
+- **Ponto de atenção técnico:** Garantir ativação e revogação atômicas no servidor, associar confirmação à solicitação/dispositivo correto e prevenir reutilização ou sequestro de links.
+
 ## Pendências da revisão
 - Validar tecnicamente o fluxo de primeiro acesso e seus estados intermediários.
 - Prosseguir com a revisão dos requisitos do M01, uma decisão por vez.
