@@ -103,6 +103,14 @@
 - **Critérios de aceitação propostos:** (1) após detectar a revogação, não são disparadas tentativas de envio de itens da fila local; (2) mensagens e anexos pendentes são excluídos do armazenamento local; (3) novo login não restaura a fila descartada; (4) mensagens anteriormente confirmadas pelo servidor não são excluídas do histórico remoto por esse descarte.
 - **Ponto técnico:** Garantir interrupção de processos de envio em andamento e idempotência; um envio já confirmado pelo servidor antes da detecção da revogação não pode ser tratado como não enviado.
 
+
+## DEC-M01-014 — Duração do acesso offline a dados locais autorizados
+- **Requisitos relacionados:** RF-AUT-017, CA-AUT-017; interface com M10; complementa DEC-M01-011, DEC-M01-012 e DEC-M01-013.
+- **Decisão:** O acesso aos dados locais **previamente autorizados não terá limite fixo de tempo** enquanto o aplicativo estiver offline. A sessão deverá ser **revalidada ao restabelecer a conexão**; nesse momento, serão aplicadas as regras de **revogação, encerramento de acesso e limpeza local** já homologadas.
+- **Status:** Confirmada pelo PO; aguardando validação técnica e incorporação à próxima versão da matriz.
+- **Critérios de aceitação propostos:** (1) sem conectividade, dados locais anteriormente autorizados continuam consultáveis sem expiração por prazo offline fixo; (2) operações dependentes do servidor não são consideradas concluídas enquanto offline; (3) ao reconectar, a sessão é revalidada antes de operações remotas protegidas; (4) caso o servidor informe revogação, o aplicativo encerra o acesso e remove credenciais, cache e fila pendente conforme DEC-M01-012/013.
+- **Risco para validação técnica:** Enquanto o dispositivo estiver desconectado, revogações e mudanças de permissão remotas não podem ser detectadas; avaliar mitigação de exposição de dados em dispositivos perdidos ou compartilhados.
+
 ## Pendências da revisão
 - Validar tecnicamente o fluxo de primeiro acesso e seus estados intermediários.
 - Prosseguir com a revisão dos requisitos do M01, uma decisão por vez.
