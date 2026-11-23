@@ -28,6 +28,14 @@
 - **Status:** Confirmada pelo PO; aguardando revisão técnica e incorporação à versão homologável da matriz.
 - **Verificação proposta:** Recusar senha com 7 caracteres; aceitar, quanto a esta regra, senha com 8 ou mais caracteres mesmo sem misturar categorias. Outras verificações de segurança eventualmente aplicáveis devem ser avaliadas separadamente, sem pressupor novas restrições.
 
+
+## DEC-M01-004 — Confirmação para alteração de senha autenticada
+- **Requisitos relacionados:** RF-AUT-005, CA-AUT-005, RN-AUT-003; interface com RF-AUT-006 a RF-AUT-010.
+- **Decisão:** A alteração de senha solicitada por usuário autenticado exige confirmação por link enviado ao e-mail de recuperação cadastrado e confirmado, **sem solicitar a senha anterior**. Após a alteração efetiva, todas as sessões existentes serão revogadas e será exigida nova autenticação.
+- **Status:** Confirmada pelo PO; pendente de validação técnica e incorporação à próxima versão da matriz.
+- **Critérios de aceitação propostos:** (1) Sem confirmação válida pelo link, a senha não é alterada; (2) após confirmação válida, a nova senha é aplicada; (3) sessões anteriores são revogadas; (4) novo login é obrigatório; (5) não é exigida senha anterior.
+- **Pontos ainda não decididos:** Prazo de validade, uso único e invalidação de links anteriores especificamente para a confirmação de alteração de senha autenticada. Não presumir que as regras do fluxo de recuperação de senha se aplicam automaticamente.
+
 ## Pendências da revisão
 - Validar tecnicamente o fluxo de primeiro acesso e seus estados intermediários.
 - Prosseguir com a revisão dos requisitos do M01, uma decisão por vez.
