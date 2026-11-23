@@ -111,6 +111,14 @@
 - **Critérios de aceitação propostos:** (1) sem conectividade, dados locais anteriormente autorizados continuam consultáveis sem expiração por prazo offline fixo; (2) operações dependentes do servidor não são consideradas concluídas enquanto offline; (3) ao reconectar, a sessão é revalidada antes de operações remotas protegidas; (4) caso o servidor informe revogação, o aplicativo encerra o acesso e remove credenciais, cache e fila pendente conforme DEC-M01-012/013.
 - **Risco para validação técnica:** Enquanto o dispositivo estiver desconectado, revogações e mudanças de permissão remotas não podem ser detectadas; avaliar mitigação de exposição de dados em dispositivos perdidos ou compartilhados.
 
+
+## DEC-M01-015 — Autenticação local ao reabrir o aplicativo offline
+- **Requisitos relacionados:** RF-AUT-017, CA-AUT-017; interface com M10; complementa DEC-M01-011, DEC-M01-014.
+- **Decisão:** Ao **reabrir o aplicativo offline**, o usuário deverá realizar **autenticação local por biometria ou credencial de desbloqueio do próprio dispositivo** antes de acessar os dados armazenados, **sem necessidade de conexão** com o servidor.
+- **Status:** Confirmada pelo PO; aguardando validação técnica e incorporação à próxima versão da matriz.
+- **Critérios de aceitação propostos:** (1) ao reabrir o aplicativo sem conexão, os dados locais ficam inacessíveis até a autenticação local bem-sucedida; (2) biometria ou credencial de desbloqueio do dispositivo permite acesso aos dados previamente autorizados; (3) falha ou cancelamento da autenticação local não libera os dados; (4) autenticação local não substitui a revalidação da sessão no servidor ao reconectar; (5) revogação detectada na reconexão provoca encerramento e limpeza conforme DEC-M01-012 e DEC-M01-013.
+- **Ponto de atenção técnico:** Avaliar mecanismos seguros nativos de autenticação local e proteção do armazenamento, sem tratar a autenticação local como prova de validade da sessão remota.
+
 ## Pendências da revisão
 - Validar tecnicamente o fluxo de primeiro acesso e seus estados intermediários.
 - Prosseguir com a revisão dos requisitos do M01, uma decisão por vez.
