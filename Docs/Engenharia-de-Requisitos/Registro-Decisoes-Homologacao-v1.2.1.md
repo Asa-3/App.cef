@@ -51,6 +51,13 @@
 - **Critérios de aceitação propostos:** (1) confirmação apenas do endereço atual não ativa o novo; (2) confirmação apenas do novo endereço não o ativa; (3) ambas as confirmações válidas ativam o novo endereço; (4) antes da ativação, o endereço anterior continua vigente para recuperação.
 - **Pendente de decisão:** Prazo de validade e política de invalidação dos links de confirmação de alteração de e-mail; não presumir que herdam automaticamente as regras dos links de senha.
 
+
+## DEC-M01-007 — Validade dos links de confirmação de alteração do e-mail de recuperação
+- **Requisitos relacionados:** RF-AUT-010, CA-AUT-010, RN-AUT-003; complementa DEC-M01-006.
+- **Decisão:** Os **dois links** de confirmação, um enviado ao e-mail de recuperação atual e outro ao novo endereço, serão **de uso único** e terão validade de **15 minutos** a partir da respectiva emissão. Uma **nova solicitação** de alteração do e-mail de recuperação invalidará todos os links da solicitação anterior e **quaisquer confirmações parciais** já realizadas. O novo endereço somente será ativado após ambas as confirmações válidas da mesma solicitação.
+- **Status:** Confirmada pelo PO; aguardando validação técnica e incorporação à próxima versão da matriz.
+- **Critérios de aceitação propostos:** (1) links expirados ou reutilizados são rejeitados; (2) apenas uma confirmação não altera o e-mail vigente; (3) nova solicitação invalida ambos os links e confirmações parciais anteriores; (4) somente duas confirmações válidas da solicitação atual ativam o novo e-mail.
+
 ## Pendências da revisão
 - Validar tecnicamente o fluxo de primeiro acesso e seus estados intermediários.
 - Prosseguir com a revisão dos requisitos do M01, uma decisão por vez.
