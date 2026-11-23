@@ -36,6 +36,13 @@
 - **Critérios de aceitação propostos:** (1) Sem confirmação válida pelo link, a senha não é alterada; (2) após confirmação válida, a nova senha é aplicada; (3) sessões anteriores são revogadas; (4) novo login é obrigatório; (5) não é exigida senha anterior.
 - **Pontos ainda não decididos:** Prazo de validade, uso único e invalidação de links anteriores especificamente para a confirmação de alteração de senha autenticada. Não presumir que as regras do fluxo de recuperação de senha se aplicam automaticamente.
 
+
+## DEC-M01-005 — Validade e invalidação do link de confirmação da troca de senha
+- **Requisitos relacionados:** RF-AUT-005, CA-AUT-005; alinhamento com RF-AUT-007, RF-AUT-008, RN-AUT-005.
+- **Decisão:** O link de confirmação da alteração de senha solicitada por usuário autenticado será **de uso único**, válido por **15 minutos** a partir da emissão. Uma nova solicitação invalidará **todos os links anteriores ainda não utilizados** para essa finalidade.
+- **Status:** Confirmada pelo PO; aguardando validação técnica e incorporação à próxima versão da matriz.
+- **Critérios de aceitação propostos:** (1) link utilizado uma vez não pode ser reutilizado; (2) link expirado após 15 minutos é recusado; (3) emissão de novo link invalida os anteriores, mesmo que não expirados; (4) apenas confirmação válida autoriza concluir a troca de senha, com revogação das sessões conforme DEC-M01-004.
+
 ## Pendências da revisão
 - Validar tecnicamente o fluxo de primeiro acesso e seus estados intermediários.
 - Prosseguir com a revisão dos requisitos do M01, uma decisão por vez.
