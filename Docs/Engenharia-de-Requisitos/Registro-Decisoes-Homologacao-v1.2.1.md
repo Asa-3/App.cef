@@ -151,6 +151,14 @@
 - **Critérios de aceitação propostos:** (1) perfil obrigatório incompleto impede avançar à alteração de senha; (2) senha inicial não alterada impede avançar à etapa de cadastro e confirmação do e-mail; (3) e-mail informado mas ainda não confirmado mantém as funcionalidades bloqueadas; (4) após concluir as três etapas na ordem estabelecida, o acesso funcional pode ser liberado, observadas as demais regras de sessão; (5) ao interromper o primeiro acesso, etapas concluídas devem ser preservadas e o fluxo deve retomar na etapa pendente, sujeito à reautenticação e à segurança de sessão.
 - **Ponto de atenção técnico:** Validar a transição de sessão após alteração obrigatória da senha inicial e o tratamento seguro de reabertura durante a etapa de confirmação do e-mail, sem presumir exceções às regras de revogação já aprovadas.
 
+
+## DEC-M01-020 — Invalidação cruzada de links após mudança efetiva de senha
+- **Requisitos relacionados:** RF-AUT-005 a RF-AUT-009, CA-AUT-005 a CA-AUT-009; complementa DEC-M01-004 e DEC-M01-005.
+- **Decisão:** Após **qualquer alteração ou redefinição de senha concluída com sucesso**, **todos os links pendentes** de **alteração autenticada** ou **recuperação de senha** serão **invalidados**, independentemente do fluxo que os originou. **Apenas novas solicitações** poderão modificar a senha novamente.
+- **Status:** Confirmada pelo PO; aguardando validação técnica e incorporação à próxima versão da matriz.
+- **Critérios de aceitação propostos:** (1) após redefinição de senha concluída, link anterior de alteração autenticada é rejeitado; (2) após alteração autenticada concluída, link anterior de recuperação é rejeitado; (3) links pendentes de ambos os tipos são invalidados após qualquer mudança efetiva de senha; (4) links emitidos em novas solicitações seguem suas regras próprias de validade e uso único; (5) uma solicitação não concluída não provoca, por esta decisão isoladamente, invalidação cruzada entre tipos de fluxo, preservadas as regras de invalidação de links anteriores do mesmo tipo.
+- **Ponto técnico:** Implementar invalidação de forma atômica à alteração efetiva da credencial e testar concorrência para impedir confirmação tardia de links antigos.
+
 ## Pendências da revisão
 - Validar tecnicamente o fluxo de primeiro acesso e seus estados intermediários.
 - Prosseguir com a revisão dos requisitos do M01, uma decisão por vez.
