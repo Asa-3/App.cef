@@ -95,6 +95,14 @@
 - **Critérios de aceitação propostos:** (1) após a revogação ser detectada, nenhuma funcionalidade protegida permanece acessível; (2) credenciais, mensagens e arquivos em cache da sessão revogada são removidos; (3) a tela de login é apresentada automaticamente; (4) o usuário não precisa confirmar a limpeza; (5) o comportamento vale após reconexão e revalidação previstas na DEC-M01-011.
 - **Ponto de atenção:** Avaliar a limpeza segura de dados temporários e de itens pendentes da fila offline (M06/M10) para evitar reenvio não autorizado após revogação.
 
+
+## DEC-M01-013 — Descarte da fila local após revogação de sessão
+- **Requisitos relacionados:** RF-AUT-013, RF-AUT-018; interface com M06 (mensagens e fila offline) e M10 (cache e sincronização); complementa DEC-M01-012.
+- **Decisão:** Ao detectar a revogação da sessão pelo servidor, o aplicativo **excluirá definitivamente a fila local de mensagens e anexos ainda não enviados**, sem tentar transmiti-los. O descarte integra a limpeza automática da sessão revogada.
+- **Status:** Confirmada pelo PO; aguardando validação técnica e incorporação à próxima versão da matriz.
+- **Critérios de aceitação propostos:** (1) após detectar a revogação, não são disparadas tentativas de envio de itens da fila local; (2) mensagens e anexos pendentes são excluídos do armazenamento local; (3) novo login não restaura a fila descartada; (4) mensagens anteriormente confirmadas pelo servidor não são excluídas do histórico remoto por esse descarte.
+- **Ponto técnico:** Garantir interrupção de processos de envio em andamento e idempotência; um envio já confirmado pelo servidor antes da detecção da revogação não pode ser tratado como não enviado.
+
 ## Pendências da revisão
 - Validar tecnicamente o fluxo de primeiro acesso e seus estados intermediários.
 - Prosseguir com a revisão dos requisitos do M01, uma decisão por vez.
