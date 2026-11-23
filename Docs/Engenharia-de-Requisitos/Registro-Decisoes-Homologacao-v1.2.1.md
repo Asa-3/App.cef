@@ -21,6 +21,13 @@
 - **Status:** Confirmada pelo PO; aguardando validação técnica e incorporação à próxima versão da matriz.
 - **Verificação proposta:** Após salvar o perfil e interromper o aplicativo, autenticar novamente com a credencial inicial; confirmar que os campos persistem, a troca de senha é exigida e as demais funções permanecem bloqueadas.
 
+
+## DEC-M01-003 — Política de comprimento e composição da senha
+- **Requisitos relacionados:** RF-AUT-004 e CA-AUT-004.
+- **Decisão:** A senha deverá ter **no mínimo 8 caracteres**, sem exigência de categorias específicas de caracteres (letras maiúsculas, minúsculas, números ou símbolos). A regra se aplica à definição e à alteração de senhas.
+- **Status:** Confirmada pelo PO; aguardando revisão técnica e incorporação à versão homologável da matriz.
+- **Verificação proposta:** Recusar senha com 7 caracteres; aceitar, quanto a esta regra, senha com 8 ou mais caracteres mesmo sem misturar categorias. Outras verificações de segurança eventualmente aplicáveis devem ser avaliadas separadamente, sem pressupor novas restrições.
+
 ## Pendências da revisão
 - Validar tecnicamente o fluxo de primeiro acesso e seus estados intermediários.
 - Prosseguir com a revisão dos requisitos do M01, uma decisão por vez.
