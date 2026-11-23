@@ -127,6 +127,14 @@
 - **Critérios de aceitação propostos:** (1) sem biometria nem credencial do sistema operacional configurada, o aplicativo não libera dados locais em modo offline; (2) após configurar credencial de desbloqueio no sistema operacional, o usuário pode realizar autenticação local e acessar dados previamente autorizados; (3) não se exige cadastro de biometria; (4) falha ou cancelamento da autenticação local mantém os dados bloqueados; (5) ao reconectar, aplica-se a revalidação de sessão e, se revogada, limpeza conforme DEC-M01-012/013.
 - **Ponto de atenção técnico:** A detecção de proteção do dispositivo e o desbloqueio devem utilizar mecanismos seguros do sistema operacional; não presumir que a configuração de credencial, por si só, já autentique o usuário.
 
+
+## DEC-M01-017 — Remoção posterior da credencial de desbloqueio do dispositivo
+- **Requisitos relacionados:** RF-AUT-017, CA-AUT-017; complementa DEC-M01-015 e DEC-M01-016; interface com M10.
+- **Decisão:** Se a **credencial de desbloqueio do dispositivo for removida** após a configuração inicial, o aplicativo **bloqueará o acesso aos dados locais** até que a proteção seja **reconfigurada no sistema operacional** e o usuário **conclua nova autenticação local**. A simples reconfiguração da credencial não libera automaticamente os dados.
+- **Status:** Confirmada pelo PO; aguardando validação técnica e incorporação à próxima versão da matriz.
+- **Critérios de aceitação propostos:** (1) após detectar a remoção da credencial de desbloqueio, mensagens, arquivos e demais dados locais não podem ser consultados; (2) restaurar a credencial do sistema operacional sem autenticação local bem-sucedida não libera acesso; (3) após reconfiguração e autenticação local válida, o acesso aos dados previamente autorizados pode ser restabelecido, observadas as demais regras de sessão; (4) não é exigido cadastro de biometria; (5) a reconexão continua sujeita à revalidação da sessão e às regras de revogação.
+- **Ponto de atenção técnico:** Avaliar se a remoção da credencial invalida chaves criptográficas do sistema operacional e como lidar com eventual impossibilidade técnica de recuperar cache local sem enfraquecer a proteção.
+
 ## Pendências da revisão
 - Validar tecnicamente o fluxo de primeiro acesso e seus estados intermediários.
 - Prosseguir com a revisão dos requisitos do M01, uma decisão por vez.
