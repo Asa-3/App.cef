@@ -79,6 +79,14 @@
 - **Status:** Confirmada pelo PO; aguardando validação técnica e incorporação à próxima versão da matriz.
 - **Critérios de aceitação propostos:** (1) a recuperação pode ser solicitada enquanto a conta está bloqueada para login; (2) a redefinição válida altera a senha e revoga sessões conforme RF-AUT-009; (3) tentativa de login durante o prazo de 60 segundos continua recusada, mesmo com a nova senha; (4) encerrado o prazo, o desbloqueio automático permite autenticação com a nova senha.
 
+
+## DEC-M01-011 — Acesso offline e revalidação da sessão
+- **Requisitos relacionados:** RF-AUT-017, CA-AUT-017; interface com M06 (fila offline) e M10 (cache e sincronização).
+- **Decisão:** Quando um usuário **já autenticado** perder a conexão, o aplicativo manterá acesso aos **dados locais previamente autorizados**, incluindo mensagens e arquivos armazenados no dispositivo. Operações dependentes do servidor ficarão **pendentes ou indisponíveis**, conforme as regras de sincronização. Ao restabelecer a conexão, o aplicativo deverá **revalidar a sessão** antes de permitir operações protegidas dependentes do servidor.
+- **Status:** Confirmada pelo PO; aguardando validação técnica e incorporação à próxima versão da matriz.
+- **Critérios de aceitação propostos:** (1) perda de conexão não impede consulta a mensagens e arquivos já armazenados e autorizados localmente; (2) ações que exigem servidor não são tratadas como concluídas sem confirmação; (3) ao reconectar, a sessão é revalidada antes de operações remotas protegidas; (4) sessão revogada no servidor não autoriza novas operações remotas.
+- **Ponto de atenção técnico:** Revogação de permissões no servidor não pode ser conhecida instantaneamente por um dispositivo desconectado; revisar tratamento do cache na reconexão e acesso offline a conteúdos anteriormente baixados, especialmente após remoção de grupo ou exclusão de conta.
+
 ## Pendências da revisão
 - Validar tecnicamente o fluxo de primeiro acesso e seus estados intermediários.
 - Prosseguir com a revisão dos requisitos do M01, uma decisão por vez.
