@@ -65,6 +65,13 @@
 - **Status:** Confirmada pelo PO; aguardando validação técnica e incorporação à próxima versão da matriz.
 - **Critérios de aceitação propostos:** (1) solicitação pendente não interrompe a sessão anterior; (2) novo dispositivo não acessa funcionalidades protegidas antes da confirmação; (3) confirmação válida ativa a nova sessão e revoga a anterior; (4) ausência de confirmação mantém a sessão anterior conforme suas demais regras de validade.
 
+
+## DEC-M01-009 — Solicitações concorrentes de acesso em novo dispositivo
+- **Requisitos relacionados:** RF-AUT-011, RF-AUT-012, RF-AUT-013; CA-AUT-011 a CA-AUT-013; complementa DEC-M01-008.
+- **Decisão:** **Somente a solicitação mais recente** de acesso em novo dispositivo permanecerá válida. Uma nova solicitação **invalidará as solicitações anteriores ainda pendentes**. A sessão atualmente ativa será mantida até que a solicitação mais recente receba **confirmação válida**; somente então a sessão anterior será revogada e o novo dispositivo autorizado.
+- **Status:** Confirmada pelo PO; aguardando validação técnica e incorporação à próxima versão da matriz.
+- **Critérios de aceitação propostos:** (1) com sessão ativa no dispositivo A, solicitar acesso em B e depois em C invalida a confirmação pendente de B; (2) tentar confirmar B após solicitação de C não ativa B; (3) A continua autorizado enquanto C aguarda confirmação; (4) confirmar C validamente ativa C e revoga A; (5) a confirmação de C não mantém sessões paralelas.
+
 ## Pendências da revisão
 - Validar tecnicamente o fluxo de primeiro acesso e seus estados intermediários.
 - Prosseguir com a revisão dos requisitos do M01, uma decisão por vez.
