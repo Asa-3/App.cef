@@ -135,6 +135,14 @@
 - **Critérios de aceitação propostos:** (1) após detectar a remoção da credencial de desbloqueio, mensagens, arquivos e demais dados locais não podem ser consultados; (2) restaurar a credencial do sistema operacional sem autenticação local bem-sucedida não libera acesso; (3) após reconfiguração e autenticação local válida, o acesso aos dados previamente autorizados pode ser restabelecido, observadas as demais regras de sessão; (4) não é exigido cadastro de biometria; (5) a reconexão continua sujeita à revalidação da sessão e às regras de revogação.
 - **Ponto de atenção técnico:** Avaliar se a remoção da credencial invalida chaves criptográficas do sistema operacional e como lidar com eventual impossibilidade técnica de recuperar cache local sem enfraquecer a proteção.
 
+
+## DEC-M01-018 — Recuperação de acesso sem acesso ao e-mail confirmado
+- **Requisitos relacionados:** RF-AUT-006, RF-AUT-010, RN-AUT-003; interface com RF-AUT-009 e gestão administrativa de contas (M02).
+- **Decisão:** Quando o usuário perder acesso ao e-mail de recuperação confirmado, a recuperação deverá ocorrer mediante **solicitação à equipe de TI** e **verificação de identidade por procedimento externo ao aplicativo**. Após validação, um **Administrador poderá iniciar a substituição do e-mail**, com **revogação das sessões existentes** e **confirmação obrigatória do novo endereço antes da recuperação do acesso**.
+- **Status:** Confirmada pelo PO; aguardando validação técnica e incorporação à próxima versão da matriz.
+- **Critérios de aceitação propostos:** (1) sem validação externa da identidade, o Administrador não pode concluir o procedimento excepcional; (2) após validação, o Administrador inicia substituição do e-mail de recuperação; (3) as sessões existentes são revogadas no procedimento; (4) o novo e-mail não é habilitado para recuperação até confirmação válida; (5) a recuperação de acesso não é liberada antes dessa confirmação.
+- **Pontos de implementação a validar:** registrar evidências e autorização da verificação externa, limitar a operação a Administradores e assegurar que o fluxo excepcional não dependa de confirmação no e-mail antigo inacessível; detalhar o instante da revogação e a emissão/expiração do link de confirmação sem contrariar as regras já aprovadas.
+
 ## Pendências da revisão
 - Validar tecnicamente o fluxo de primeiro acesso e seus estados intermediários.
 - Prosseguir com a revisão dos requisitos do M01, uma decisão por vez.
