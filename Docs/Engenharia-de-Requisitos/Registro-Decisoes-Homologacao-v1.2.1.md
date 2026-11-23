@@ -119,6 +119,14 @@
 - **Critérios de aceitação propostos:** (1) ao reabrir o aplicativo sem conexão, os dados locais ficam inacessíveis até a autenticação local bem-sucedida; (2) biometria ou credencial de desbloqueio do dispositivo permite acesso aos dados previamente autorizados; (3) falha ou cancelamento da autenticação local não libera os dados; (4) autenticação local não substitui a revalidação da sessão no servidor ao reconectar; (5) revogação detectada na reconexão provoca encerramento e limpeza conforme DEC-M01-012 e DEC-M01-013.
 - **Ponto de atenção técnico:** Avaliar mecanismos seguros nativos de autenticação local e proteção do armazenamento, sem tratar a autenticação local como prova de validade da sessão remota.
 
+
+## DEC-M01-016 — Ausência de proteção local configurada no dispositivo
+- **Requisitos relacionados:** RF-AUT-017, CA-AUT-017; complementa DEC-M01-015 e DEC-M01-014; interface com M10.
+- **Decisão:** Se o dispositivo **não possuir biometria nem credencial de desbloqueio configurada**, o aplicativo **bloqueará o acesso offline aos dados locais** até que o usuário **configure uma credencial de desbloqueio no sistema operacional**. O uso de **biometria será opcional**; a credencial de desbloqueio do dispositivo é suficiente para permitir autenticação local.
+- **Status:** Confirmada pelo PO; aguardando validação técnica e incorporação à próxima versão da matriz.
+- **Critérios de aceitação propostos:** (1) sem biometria nem credencial do sistema operacional configurada, o aplicativo não libera dados locais em modo offline; (2) após configurar credencial de desbloqueio no sistema operacional, o usuário pode realizar autenticação local e acessar dados previamente autorizados; (3) não se exige cadastro de biometria; (4) falha ou cancelamento da autenticação local mantém os dados bloqueados; (5) ao reconectar, aplica-se a revalidação de sessão e, se revogada, limpeza conforme DEC-M01-012/013.
+- **Ponto de atenção técnico:** A detecção de proteção do dispositivo e o desbloqueio devem utilizar mecanismos seguros do sistema operacional; não presumir que a configuração de credencial, por si só, já autentique o usuário.
+
 ## Pendências da revisão
 - Validar tecnicamente o fluxo de primeiro acesso e seus estados intermediários.
 - Prosseguir com a revisão dos requisitos do M01, uma decisão por vez.
