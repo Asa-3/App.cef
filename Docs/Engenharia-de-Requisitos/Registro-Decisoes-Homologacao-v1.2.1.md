@@ -72,6 +72,13 @@
 - **Status:** Confirmada pelo PO; aguardando validação técnica e incorporação à próxima versão da matriz.
 - **Critérios de aceitação propostos:** (1) com sessão ativa no dispositivo A, solicitar acesso em B e depois em C invalida a confirmação pendente de B; (2) tentar confirmar B após solicitação de C não ativa B; (3) A continua autorizado enquanto C aguarda confirmação; (4) confirmar C validamente ativa C e revoga A; (5) a confirmação de C não mantém sessões paralelas.
 
+
+## DEC-M01-010 — Recuperação de senha durante bloqueio temporário de login
+- **Requisitos relacionados:** RF-AUT-006 a RF-AUT-009; RF-AUT-014 a RF-AUT-016; CA-AUT-006, CA-AUT-015, CA-AUT-016.
+- **Decisão:** Durante o bloqueio temporário de **60 segundos** decorrente de cinco falhas consecutivas de autenticação, o usuário **poderá solicitar recuperação de senha** pelo e-mail de recuperação confirmado. Uma redefinição válida da senha **não encerra antecipadamente** o bloqueio de login: novas tentativas de autenticação continuam recusadas até o fim do prazo original.
+- **Status:** Confirmada pelo PO; aguardando validação técnica e incorporação à próxima versão da matriz.
+- **Critérios de aceitação propostos:** (1) a recuperação pode ser solicitada enquanto a conta está bloqueada para login; (2) a redefinição válida altera a senha e revoga sessões conforme RF-AUT-009; (3) tentativa de login durante o prazo de 60 segundos continua recusada, mesmo com a nova senha; (4) encerrado o prazo, o desbloqueio automático permite autenticação com a nova senha.
+
 ## Pendências da revisão
 - Validar tecnicamente o fluxo de primeiro acesso e seus estados intermediários.
 - Prosseguir com a revisão dos requisitos do M01, uma decisão por vez.
