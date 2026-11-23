@@ -143,6 +143,14 @@
 - **Critérios de aceitação propostos:** (1) sem validação externa da identidade, o Administrador não pode concluir o procedimento excepcional; (2) após validação, o Administrador inicia substituição do e-mail de recuperação; (3) as sessões existentes são revogadas no procedimento; (4) o novo e-mail não é habilitado para recuperação até confirmação válida; (5) a recuperação de acesso não é liberada antes dessa confirmação.
 - **Pontos de implementação a validar:** registrar evidências e autorização da verificação externa, limitar a operação a Administradores e assegurar que o fluxo excepcional não dependa de confirmação no e-mail antigo inacessível; detalhar o instante da revogação e a emissão/expiração do link de confirmação sem contrariar as regras já aprovadas.
 
+
+## DEC-M01-019 — Cadastro e confirmação do e-mail de recuperação no primeiro acesso
+- **Requisitos relacionados:** RF-AUT-002, RF-AUT-003, RN-AUT-003, CA-AUT-002, CA-AUT-003; complementa DEC-M01-001 e DEC-M01-002; interface com M02.
+- **Decisão:** No primeiro acesso, o usuário deverá **primeiro preencher o perfil obrigatório**, **depois alterar a senha inicial** e, **em seguida, cadastrar e confirmar o e-mail de recuperação**. O acesso às demais funcionalidades ficará **bloqueado até a conclusão das três etapas**, nesta ordem.
+- **Status:** Confirmada pelo PO; aguardando validação técnica e incorporação à próxima versão da matriz.
+- **Critérios de aceitação propostos:** (1) perfil obrigatório incompleto impede avançar à alteração de senha; (2) senha inicial não alterada impede avançar à etapa de cadastro e confirmação do e-mail; (3) e-mail informado mas ainda não confirmado mantém as funcionalidades bloqueadas; (4) após concluir as três etapas na ordem estabelecida, o acesso funcional pode ser liberado, observadas as demais regras de sessão; (5) ao interromper o primeiro acesso, etapas concluídas devem ser preservadas e o fluxo deve retomar na etapa pendente, sujeito à reautenticação e à segurança de sessão.
+- **Ponto de atenção técnico:** Validar a transição de sessão após alteração obrigatória da senha inicial e o tratamento seguro de reabertura durante a etapa de confirmação do e-mail, sem presumir exceções às regras de revogação já aprovadas.
+
 ## Pendências da revisão
 - Validar tecnicamente o fluxo de primeiro acesso e seus estados intermediários.
 - Prosseguir com a revisão dos requisitos do M01, uma decisão por vez.
