@@ -58,6 +58,13 @@
 - **Status:** Confirmada pelo PO; aguardando validação técnica e incorporação à próxima versão da matriz.
 - **Critérios de aceitação propostos:** (1) links expirados ou reutilizados são rejeitados; (2) apenas uma confirmação não altera o e-mail vigente; (3) nova solicitação invalida ambos os links e confirmações parciais anteriores; (4) somente duas confirmações válidas da solicitação atual ativam o novo e-mail.
 
+
+## DEC-M01-008 — Sessão anterior durante confirmação de novo dispositivo
+- **Requisitos relacionados:** RF-AUT-011, RF-AUT-012, RF-AUT-013; CA-AUT-011, CA-AUT-012, CA-AUT-013.
+- **Decisão:** Enquanto a confirmação de acesso ao **novo dispositivo** estiver pendente, a sessão do **dispositivo anterior permanecerá ativa**. A sessão anterior será revogada **somente após confirmação válida** do novo dispositivo. O novo dispositivo não obtém sessão ativa antes da confirmação.
+- **Status:** Confirmada pelo PO; aguardando validação técnica e incorporação à próxima versão da matriz.
+- **Critérios de aceitação propostos:** (1) solicitação pendente não interrompe a sessão anterior; (2) novo dispositivo não acessa funcionalidades protegidas antes da confirmação; (3) confirmação válida ativa a nova sessão e revoga a anterior; (4) ausência de confirmação mantém a sessão anterior conforme suas demais regras de validade.
+
 ## Pendências da revisão
 - Validar tecnicamente o fluxo de primeiro acesso e seus estados intermediários.
 - Prosseguir com a revisão dos requisitos do M01, uma decisão por vez.
