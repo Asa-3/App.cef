@@ -87,6 +87,14 @@
 - **Critérios de aceitação propostos:** (1) perda de conexão não impede consulta a mensagens e arquivos já armazenados e autorizados localmente; (2) ações que exigem servidor não são tratadas como concluídas sem confirmação; (3) ao reconectar, a sessão é revalidada antes de operações remotas protegidas; (4) sessão revogada no servidor não autoriza novas operações remotas.
 - **Ponto de atenção técnico:** Revogação de permissões no servidor não pode ser conhecida instantaneamente por um dispositivo desconectado; revisar tratamento do cache na reconexão e acesso offline a conteúdos anteriormente baixados, especialmente após remoção de grupo ou exclusão de conta.
 
+
+## DEC-M01-012 — Encerramento e limpeza local após revogação detectada
+- **Requisitos relacionados:** RF-AUT-011, RF-AUT-013, RF-AUT-017, RF-AUT-018; CA-AUT-011, CA-AUT-013, CA-AUT-017, CA-AUT-018; interface com M10.
+- **Decisão:** Ao detectar que a sessão foi **revogada pelo servidor**, o aplicativo **encerrará automaticamente o acesso**, removerá **credenciais e dados locais da sessão revogada**, incluindo **mensagens e arquivos em cache**, e **retornará à tela de login**, sem depender de confirmação manual.
+- **Status:** Confirmada pelo PO; aguardando validação técnica e incorporação à próxima versão da matriz.
+- **Critérios de aceitação propostos:** (1) após a revogação ser detectada, nenhuma funcionalidade protegida permanece acessível; (2) credenciais, mensagens e arquivos em cache da sessão revogada são removidos; (3) a tela de login é apresentada automaticamente; (4) o usuário não precisa confirmar a limpeza; (5) o comportamento vale após reconexão e revalidação previstas na DEC-M01-011.
+- **Ponto de atenção:** Avaliar a limpeza segura de dados temporários e de itens pendentes da fila offline (M06/M10) para evitar reenvio não autorizado após revogação.
+
 ## Pendências da revisão
 - Validar tecnicamente o fluxo de primeiro acesso e seus estados intermediários.
 - Prosseguir com a revisão dos requisitos do M01, uma decisão por vez.
