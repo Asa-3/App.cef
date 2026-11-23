@@ -43,6 +43,14 @@
 - **Status:** Confirmada pelo PO; aguardando validação técnica e incorporação à próxima versão da matriz.
 - **Critérios de aceitação propostos:** (1) link utilizado uma vez não pode ser reutilizado; (2) link expirado após 15 minutos é recusado; (3) emissão de novo link invalida os anteriores, mesmo que não expirados; (4) apenas confirmação válida autoriza concluir a troca de senha, com revogação das sessões conforme DEC-M01-004.
 
+
+## DEC-M01-006 — Confirmação dupla na alteração do e-mail de recuperação
+- **Requisitos relacionados:** RF-AUT-010, CA-AUT-010, RN-AUT-003; interface com RF-AUT-006 e RF-AUT-012.
+- **Decisão:** A alteração do e-mail de recuperação exige confirmação tanto no **endereço atual** quanto no **novo endereço**. O novo e-mail somente será ativado após **ambas** as confirmações válidas. Até então, o endereço atual permanece como e-mail de recuperação vigente.
+- **Status:** Confirmada pelo PO; aguardando validação técnica e incorporação à próxima versão da matriz.
+- **Critérios de aceitação propostos:** (1) confirmação apenas do endereço atual não ativa o novo; (2) confirmação apenas do novo endereço não o ativa; (3) ambas as confirmações válidas ativam o novo endereço; (4) antes da ativação, o endereço anterior continua vigente para recuperação.
+- **Pendente de decisão:** Prazo de validade e política de invalidação dos links de confirmação de alteração de e-mail; não presumir que herdam automaticamente as regras dos links de senha.
+
 ## Pendências da revisão
 - Validar tecnicamente o fluxo de primeiro acesso e seus estados intermediários.
 - Prosseguir com a revisão dos requisitos do M01, uma decisão por vez.
