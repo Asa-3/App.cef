@@ -2298,3 +2298,7 @@ Regras negativas e concorrência exigem testes específicos; vínculo não compr
 | PBI-060 | Atividade complementar/transversal; ver MVP-05 | [#83](https://github.com/Asa-3/App.cef/issues/83), [#84](https://github.com/Asa-3/App.cef/issues/84), [#85](https://github.com/Asa-3/App.cef/issues/85) |
 ### Controle
 RF-NOT-004, RF-SINC-011, RF-SINC-014, RN-AUD-001 e RN-USR-004: aplicação compartilhada limitada ao MVP. W não recebe PBI do MVP. #96 referência candidata de M09. Revisar propostas com PO/QA/TL; confirmar UML, testes, issues e IDs legados (#105). INC-DOC-003 parcial; INC-DOC-004/005 abertas. Nenhum teste executado.
+
+## 12. Homologação individual M01
+### DEC-RAST-M01-001 — aprovada pelo PO em 27/11/2026
+RF-AUT-001 ↔ RN-AUT-001 ↔ CA-AUT-001; vínculo transversal RF-USR-002 e CA-USR-002, este último sujeito à conferência da cobertura integral da unicidade e permanência. Preservados IDs e enunciados. Aprovação documental não comprova execução. Manifestação: “Aprovo integralmente a DEC-RAST-M01-001. Registre a decisão e prossiga para o RF-AUT-002.”
