@@ -2,7 +2,7 @@
 
 ## Escopo simplificado
 
-Permitir que participantes enviem e visualizem anexos PDF e JPEG nas conversas do App.cef. Como este é um projeto experimental/facultativo, não haverá scanner antivírus, fila de análise ou fluxo de aprovação assíncrona.
+Permitir que participantes enviem e visualizem anexos PDF e JPEG nas conversas do App.cef. Como este é um projeto experimental/facultativo, a implementação é direta, sem scanner, fila de análise ou aprovação assíncrona.
 
 ## Configuração
 
@@ -21,7 +21,8 @@ Permitir que participantes enviem e visualizem anexos PDF e JPEG nas conversas d
 - Os arquivos ficam em bucket privado.
 - A leitura respeita a participação e as regras de acesso à mensagem.
 - A exclusão é permitida ao autor ou administrador participante.
-- Mensagens de arquivo ficam disponíveis imediatamente após o envio; não existe scanner nesta versão.
+- Mensagens de arquivo recebem status `approved` imediatamente pelo trigger; não existe scanner nesta versão.
+- A policy de upload exige que os metadados correspondam à mensagem aprovada e ao usuário remetente.
 - Não usar `upsert`; cada anexo deve ter um caminho único.
 
 ## Limites conhecidos
@@ -33,8 +34,9 @@ A validação é básica (MIME, extensão e tamanho). Não há inspeção antiv�
 ## Verificações
 
 - Bucket privado e policies de INSERT, SELECT e DELETE aplicadas no Supabase Online.
-- Trigger define automaticamente o status do anexo como `approved`, permitindo leitura pelos participantes.
-- A migration de simplificação atualiza o fluxo anterior que deixava os anexos bloqueados em `pending_scan`.
+- Trigger define automaticamente o status do anexo como `approved`.
+- Policies de upload e download mantêm o acesso restrito a participantes autorizados.
+- A migration incremental `20261127210000_approve_message_attachments_immediately.sql` corrige o fluxo anterior que deixava anexos bloqueados em `pending_scan`.
 - O bucket legado `chat-media` e seus arquivos não foram alterados.
 
 ## Fora do escopo
