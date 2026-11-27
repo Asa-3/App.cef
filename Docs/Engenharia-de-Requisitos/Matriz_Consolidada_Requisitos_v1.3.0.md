@@ -1,6 +1,6 @@
 # Matriz Consolidada de Requisitos — Versão 1.3.0 (base v1.2.1 + ampliação M01 homologada)
 **Projeto:** Aplicativo mobile de comunicação interna empresarial (Funcionário e Administrador)  
-**Data:** 12/11/2026  
+**Data:** 23/11/2026  
 **Status atual:** 12/12 módulos homologados documentalmente pelo PO em 23/11/2026; validação técnica e execução de testes não atestadas. O status histórico da v1.2.1 permanece preservado no arquivo anterior.  
 **Ferramentas previstas:** GitHub, Supabase, Vercel e desenvolvimento assistido por IA.
 
