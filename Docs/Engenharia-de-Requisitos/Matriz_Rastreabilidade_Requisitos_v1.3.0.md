@@ -1,12 +1,12 @@
 # Matriz de Rastreabilidade — App.cef v1.3.0
 
-Data: 27/11/2026. Status: inventário integral dos IDs encontrados; revisão de vínculos e evidências pendente. Fonte: [Matriz v1.3.0](Matriz_Consolidada_Requisitos_v1.3.0.md), blob 4047afece842ca8ac54e49e29f3225bec9066d3e; [decisões](Registro-Decisoes-Homologacao-v1.2.1.md); [homologação](Homologacao_Consolidada_PO_M01_a_M12_2026-11-23.md); [issues](https://github.com/Asa-3/App.cef/issues) (100 resultados consultados).
+Data: 27/11/2026. Status: inventário integral dos IDs encontrados; revisão de vínculos e evidências pendente. Fonte: [Matriz v1.3.0](Matriz_Consolidada_Requisitos_v1.3.0.md), blob 65b12d140621838d1d7708072373deee23314fc0; [decisões](Registro-Decisoes-Homologacao-v1.2.1.md); [homologação](Homologacao_Consolidada_PO_M01_a_M12_2026-11-23.md); [issues](https://github.com/Asa-3/App.cef/issues) (100 resultados consultados).
 
 E = explícito na fonte; P = proposto, requer revisão; L = lacuna. Menção literal em issue não prova cobertura. CT-P é ID de planejamento, não teste executado. UML é proposta por tipo, não arquivo verificado. Não se altera a linha de base homologada.
 
 ## 1. Inventário e divergência
 
-148 RF, 77 RN, **166 CA funcionais únicos encontrados (167 declarados)**, 11 RNF, 11 CA-NF, 19 CON, 412 cenários: **844 elementos reais**. M05 possui 19 CA únicos (001–011 e 013–020); CA-GRP-012 foi migrado para CA-GRP-020, não deve ser contado novamente. O inventário declara 20. Corrigir contagem em revisão controlada, sem inventar requisito. 
+148 RF, 77 RN, **166 CA funcionais únicos**, 11 RNF, 11 CA-NF, 19 CON, 412 cenários: **844 elementos rastreáveis**. M05 possui 19 CA únicos (001–011 e 013–020); CA-GRP-012 foi migrado para CA-GRP-020. Errata INC-DOC-006 de 27/11/2026: inventário da matriz vigente corrigido de 20 para 19 no M05 e de 167 para 166 no total, sem mudança de escopo. 
 
 ## 2. Índice de módulos
 
@@ -933,6 +933,6 @@ Vínculos herdados da CON são P quanto à aplicabilidade individual. Todos agua
 | Backlog conflitante | Reconciliar escopo e duplicidades | [#103](https://github.com/Asa-3/App.cef/issues/103), [#104](https://github.com/Asa-3/App.cef/issues/104) |
 | Desempenho | Definir métrica | [#101](https://github.com/Asa-3/App.cef/issues/101) |
 | Anexo em análise | Resolver R-02 | [#106](https://github.com/Asa-3/App.cef/issues/106) |
-| Contagem CA | Corrigir inventário M05 de 20 para 19 IDs únicos e total de 167 para 166, após revisão PO | Pendente |
+| Contagem CA | Inventário corrigido em 27/11/2026 (INC-DOC-006) | Resolvida |
 
 Migração: RF-GRP-012 v1.2 → RF-GRP-017; CA-GRP-012 v1.2 → CA-GRP-020. RN-GRP-005 a 011 reservados. INC-DOC-003 parcialmente tratada: inventário e vínculos internos estruturados; validação de relações propostas, legados, UML e evidências ainda pendente.
