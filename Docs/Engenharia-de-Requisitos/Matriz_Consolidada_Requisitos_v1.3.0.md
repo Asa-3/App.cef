@@ -17,13 +17,15 @@ Cada requisito tem identificador estável por módulo (`RF-XXX-###`), uma regra 
 **Aprovação:** [Termo consolidado M01–M12](Homologacao_Consolidada_PO_M01_a_M12_2026-11-23.md). **Histórico:** [Registro de decisões](Registro-Decisoes-Homologacao-v1.2.1.md). **Versão-base:** [v1.2.1](Matriz_Consolidada_Requisitos_v1.2.1.md).
 
 ## 2. Inventário
+
+**Errata INC-DOC-006 (27/11/2026):** corrigida a contagem de CA funcionais de M05 (20 → 19) e do total (167 → 166), considerando IDs únicos. CA-GRP-012 foi migrado para CA-GRP-020; nenhum critério ou requisito foi acrescentado, removido ou alterado. Data de criação e homologação preservadas.
 | Módulo | RF | RN | CA |
 |---|---:|---:|---:|
 | M01 — Autenticação e sessões | 18 | 16 | 34 |
 | M02 — Contas e perfis | 19 | 4 | 19 |
 | M03 — Contatos | 5 | 3 | 5 |
 | M04 — Conversas individuais | 4 | 3 | 4 |
-| M05 — Grupos | 17 | 9 | 20 |
+| M05 — Grupos | 17 | 9 | 19 |
 | M06 — Mensagens e fila de envio | 14 | 5 | 14 |
 | M07 — Anexos e downloads | 27 | 6 | 27 |
 | M08 — Notificações | 4 | 3 | 4 |
@@ -31,7 +33,7 @@ Cada requisito tem identificador estável por módulo (`RF-XXX-###`), uma regra 
 | M10 — Histórico, cache e sincronização | 15 | 7 | 15 |
 | M11 — Auditoria | 9 | 5 | 9 |
 | M12 — Infraestrutura, segurança e qualidade | 0 | 7 | 0 |
-| **Total funcional** | **148** | **77** | **167** |
+| **Total funcional** | **148** | **77** | **166** |
 | **M12 — RNF** | **11 RNF** | — | **11 CA-NF** |
 
 ## 3. Matriz de requisitos funcionais, regras e aceitação
