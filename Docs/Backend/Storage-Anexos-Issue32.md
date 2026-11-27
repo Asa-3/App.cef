@@ -36,7 +36,7 @@ A validação é básica (MIME, extensão e tamanho). Não há inspeção antiv�
 - Bucket privado e policies de INSERT, SELECT e DELETE aplicadas no Supabase Online.
 - Trigger define automaticamente o status do anexo como `approved`.
 - Policies de upload e download mantêm o acesso restrito a participantes autorizados.
-- A migration incremental `20261127210000_approve_message_attachments_immediately.sql` corrige o fluxo anterior que deixava anexos bloqueados em `pending_scan`.
+- As migrations incrementais `20261127210000_approve_message_attachments_immediately.sql` e `20261127211500_fix_attachment_extension_policy.sql` corrigem a aprovação imediata e as verificações de extensão PDF/JPEG.
 - O bucket legado `chat-media` e seus arquivos não foram alterados.
 
 ## Fora do escopo
