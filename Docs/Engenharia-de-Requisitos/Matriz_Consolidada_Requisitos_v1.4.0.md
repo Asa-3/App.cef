@@ -33,7 +33,7 @@ Cada requisito tem identificador estável por módulo (`RF-XXX-###`), uma regra 
 | M10 — Histórico, cache e sincronização | 15 | 7 | 15 |
 | M11 — Auditoria | 9 | 5 | 9 |
 | M12 — Infraestrutura, segurança e qualidade | 0 | 7 | 0 |
-| **Total funcional** | **148** | **77** | **166** |
+| **Total funcional** | **151** | **78** | **169** |
 | **M12 — RNF** | **11 RNF** | — | **11 CA-NF** |
 
 ## 3. Matriz de requisitos funcionais, regras e aceitação
