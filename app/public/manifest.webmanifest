@@ -1,0 +1,9 @@
+{
+  "name": "App.cef",
+  "short_name": "App.cef",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ededed",
+  "theme_color": "#ffe600",
+  "icons": [{ "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}
