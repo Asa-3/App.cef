@@ -936,3 +936,440 @@ Vínculos herdados da CON são P quanto à aplicabilidade individual. Todos agua
 | Contagem CA | Inventário corrigido em 27/11/2026 (INC-DOC-006) | Resolvida |
 
 Migração: RF-GRP-012 v1.2 → RF-GRP-017; CA-GRP-012 v1.2 → CA-GRP-020. RN-GRP-005 a 011 reservados. INC-DOC-003 parcialmente tratada: inventário e vínculos internos estruturados; validação de relações propostas, legados, UML e evidências ainda pendente.
+
+
+## 10. Revisão complementar INC-DOC-003 — 27/11/2026
+
+### Conferência referencial
+
+Foram conferidos os IDs RF/RN/CA/RNF contra a linha de base vigente. Referências não presentes como IDs atuais: CA-GRP-012, RN-GRP-005. IDs históricos não constituem novos requisitos; demais referências ausentes exigem revisão. A conferência é sintática, não valida pertinência semântica.
+
+### Índice de issues por ID, incluindo intervalos declarados
+
+Expansão apenas de intervalos explícitos com prefixo igual, intersectados com IDs vigentes. Menção não implica cobertura integral nem implementação. Foram consultadas 100 issues; sem garantia de exaustividade.
+
+| ID | Issues que mencionam ID ou intervalo (E) |
+|---|---|
+| CA-ARQ-001 | L — sem menção explícita localizada |
+| CA-ARQ-002 | L — sem menção explícita localizada |
+| CA-ARQ-003 | L — sem menção explícita localizada |
+| CA-ARQ-004 | L — sem menção explícita localizada |
+| CA-ARQ-005 | L — sem menção explícita localizada |
+| CA-ARQ-006 | L — sem menção explícita localizada |
+| CA-ARQ-007 | L — sem menção explícita localizada |
+| CA-ARQ-008 | L — sem menção explícita localizada |
+| CA-ARQ-009 | L — sem menção explícita localizada |
+| CA-ARQ-010 | L — sem menção explícita localizada |
+| CA-ARQ-011 | L — sem menção explícita localizada |
+| CA-ARQ-012 | L — sem menção explícita localizada |
+| CA-ARQ-013 | L — sem menção explícita localizada |
+| CA-ARQ-014 | L — sem menção explícita localizada |
+| CA-ARQ-015 | L — sem menção explícita localizada |
+| CA-ARQ-016 | L — sem menção explícita localizada |
+| CA-ARQ-017 | L — sem menção explícita localizada |
+| CA-ARQ-018 | L — sem menção explícita localizada |
+| CA-ARQ-019 | L — sem menção explícita localizada |
+| CA-ARQ-020 | L — sem menção explícita localizada |
+| CA-ARQ-021 | L — sem menção explícita localizada |
+| CA-ARQ-022 | L — sem menção explícita localizada |
+| CA-ARQ-023 | L — sem menção explícita localizada |
+| CA-ARQ-024 | L — sem menção explícita localizada |
+| CA-ARQ-025 | L — sem menção explícita localizada |
+| CA-ARQ-026 | L — sem menção explícita localizada |
+| CA-ARQ-027 | L — sem menção explícita localizada |
+| CA-AUD-001 | [#97](https://github.com/Asa-3/App.cef/issues/97) |
+| CA-AUD-002 | [#97](https://github.com/Asa-3/App.cef/issues/97) |
+| CA-AUD-003 | [#97](https://github.com/Asa-3/App.cef/issues/97) |
+| CA-AUD-004 | [#97](https://github.com/Asa-3/App.cef/issues/97) |
+| CA-AUD-005 | [#97](https://github.com/Asa-3/App.cef/issues/97) |
+| CA-AUD-006 | [#97](https://github.com/Asa-3/App.cef/issues/97) |
+| CA-AUD-007 | [#97](https://github.com/Asa-3/App.cef/issues/97) |
+| CA-AUD-008 | [#97](https://github.com/Asa-3/App.cef/issues/97) |
+| CA-AUD-009 | [#97](https://github.com/Asa-3/App.cef/issues/97) |
+| CA-AUT-001 | [#90](https://github.com/Asa-3/App.cef/issues/90) |
+| CA-AUT-002 | L — sem menção explícita localizada |
+| CA-AUT-003 | L — sem menção explícita localizada |
+| CA-AUT-004 | L — sem menção explícita localizada |
+| CA-AUT-005 | L — sem menção explícita localizada |
+| CA-AUT-006 | L — sem menção explícita localizada |
+| CA-AUT-007 | L — sem menção explícita localizada |
+| CA-AUT-008 | L — sem menção explícita localizada |
+| CA-AUT-009 | L — sem menção explícita localizada |
+| CA-AUT-010 | L — sem menção explícita localizada |
+| CA-AUT-011 | L — sem menção explícita localizada |
+| CA-AUT-012 | L — sem menção explícita localizada |
+| CA-AUT-013 | L — sem menção explícita localizada |
+| CA-AUT-014 | L — sem menção explícita localizada |
+| CA-AUT-015 | L — sem menção explícita localizada |
+| CA-AUT-016 | L — sem menção explícita localizada |
+| CA-AUT-017 | L — sem menção explícita localizada |
+| CA-AUT-018 | L — sem menção explícita localizada |
+| CA-AUT-019 | L — sem menção explícita localizada |
+| CA-AUT-020 | L — sem menção explícita localizada |
+| CA-AUT-021 | L — sem menção explícita localizada |
+| CA-AUT-022 | L — sem menção explícita localizada |
+| CA-AUT-023 | L — sem menção explícita localizada |
+| CA-AUT-024 | L — sem menção explícita localizada |
+| CA-AUT-025 | L — sem menção explícita localizada |
+| CA-AUT-026 | L — sem menção explícita localizada |
+| CA-AUT-027 | L — sem menção explícita localizada |
+| CA-AUT-028 | L — sem menção explícita localizada |
+| CA-AUT-029 | L — sem menção explícita localizada |
+| CA-AUT-030 | L — sem menção explícita localizada |
+| CA-AUT-031 | L — sem menção explícita localizada |
+| CA-AUT-032 | L — sem menção explícita localizada |
+| CA-AUT-033 | L — sem menção explícita localizada |
+| CA-AUT-034 | L — sem menção explícita localizada |
+| CA-AVI-001 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| CA-AVI-002 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| CA-AVI-003 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| CA-AVI-004 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| CA-AVI-005 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| CA-AVI-006 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| CA-AVI-007 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| CA-AVI-008 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| CA-AVI-009 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| CA-AVI-010 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| CA-AVI-011 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| CA-AVI-012 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| CA-AVI-013 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| CA-AVI-014 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| CA-AVI-015 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| CA-AVI-016 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| CA-CON-001 | L — sem menção explícita localizada |
+| CA-CON-002 | L — sem menção explícita localizada |
+| CA-CON-003 | L — sem menção explícita localizada |
+| CA-CON-004 | L — sem menção explícita localizada |
+| CA-CON-005 | L — sem menção explícita localizada |
+| CA-CVI-001 | L — sem menção explícita localizada |
+| CA-CVI-002 | L — sem menção explícita localizada |
+| CA-CVI-003 | L — sem menção explícita localizada |
+| CA-CVI-004 | L — sem menção explícita localizada |
+| CA-GRP-001 | L — sem menção explícita localizada |
+| CA-GRP-002 | L — sem menção explícita localizada |
+| CA-GRP-003 | L — sem menção explícita localizada |
+| CA-GRP-004 | L — sem menção explícita localizada |
+| CA-GRP-005 | L — sem menção explícita localizada |
+| CA-GRP-006 | L — sem menção explícita localizada |
+| CA-GRP-007 | L — sem menção explícita localizada |
+| CA-GRP-008 | L — sem menção explícita localizada |
+| CA-GRP-009 | L — sem menção explícita localizada |
+| CA-GRP-010 | L — sem menção explícita localizada |
+| CA-GRP-011 | L — sem menção explícita localizada |
+| CA-GRP-013 | L — sem menção explícita localizada |
+| CA-GRP-014 | L — sem menção explícita localizada |
+| CA-GRP-015 | L — sem menção explícita localizada |
+| CA-GRP-016 | L — sem menção explícita localizada |
+| CA-GRP-017 | L — sem menção explícita localizada |
+| CA-GRP-018 | L — sem menção explícita localizada |
+| CA-GRP-019 | L — sem menção explícita localizada |
+| CA-GRP-020 | L — sem menção explícita localizada |
+| CA-MSG-001 | L — sem menção explícita localizada |
+| CA-MSG-002 | L — sem menção explícita localizada |
+| CA-MSG-003 | L — sem menção explícita localizada |
+| CA-MSG-004 | L — sem menção explícita localizada |
+| CA-MSG-005 | L — sem menção explícita localizada |
+| CA-MSG-006 | L — sem menção explícita localizada |
+| CA-MSG-007 | L — sem menção explícita localizada |
+| CA-MSG-008 | L — sem menção explícita localizada |
+| CA-MSG-009 | L — sem menção explícita localizada |
+| CA-MSG-010 | L — sem menção explícita localizada |
+| CA-MSG-011 | L — sem menção explícita localizada |
+| CA-MSG-012 | L — sem menção explícita localizada |
+| CA-MSG-013 | L — sem menção explícita localizada |
+| CA-MSG-014 | L — sem menção explícita localizada |
+| CA-NF-001 | L — sem menção explícita localizada |
+| CA-NF-002 | L — sem menção explícita localizada |
+| CA-NF-003 | L — sem menção explícita localizada |
+| CA-NF-004 | [#101](https://github.com/Asa-3/App.cef/issues/101) |
+| CA-NF-005 | L — sem menção explícita localizada |
+| CA-NF-006 | L — sem menção explícita localizada |
+| CA-NF-007 | L — sem menção explícita localizada |
+| CA-NF-008 | L — sem menção explícita localizada |
+| CA-NF-009 | L — sem menção explícita localizada |
+| CA-NF-010 | L — sem menção explícita localizada |
+| CA-NF-011 | L — sem menção explícita localizada |
+| CA-NOT-001 | L — sem menção explícita localizada |
+| CA-NOT-002 | L — sem menção explícita localizada |
+| CA-NOT-003 | L — sem menção explícita localizada |
+| CA-NOT-004 | L — sem menção explícita localizada |
+| CA-SINC-001 | L — sem menção explícita localizada |
+| CA-SINC-002 | L — sem menção explícita localizada |
+| CA-SINC-003 | L — sem menção explícita localizada |
+| CA-SINC-004 | L — sem menção explícita localizada |
+| CA-SINC-005 | L — sem menção explícita localizada |
+| CA-SINC-006 | L — sem menção explícita localizada |
+| CA-SINC-007 | L — sem menção explícita localizada |
+| CA-SINC-008 | L — sem menção explícita localizada |
+| CA-SINC-009 | L — sem menção explícita localizada |
+| CA-SINC-010 | L — sem menção explícita localizada |
+| CA-SINC-011 | L — sem menção explícita localizada |
+| CA-SINC-012 | L — sem menção explícita localizada |
+| CA-SINC-013 | L — sem menção explícita localizada |
+| CA-SINC-014 | L — sem menção explícita localizada |
+| CA-SINC-015 | L — sem menção explícita localizada |
+| CA-USR-001 | L — sem menção explícita localizada |
+| CA-USR-002 | L — sem menção explícita localizada |
+| CA-USR-003 | L — sem menção explícita localizada |
+| CA-USR-004 | L — sem menção explícita localizada |
+| CA-USR-005 | L — sem menção explícita localizada |
+| CA-USR-006 | L — sem menção explícita localizada |
+| CA-USR-007 | L — sem menção explícita localizada |
+| CA-USR-008 | L — sem menção explícita localizada |
+| CA-USR-009 | L — sem menção explícita localizada |
+| CA-USR-010 | L — sem menção explícita localizada |
+| CA-USR-011 | L — sem menção explícita localizada |
+| CA-USR-012 | L — sem menção explícita localizada |
+| CA-USR-013 | L — sem menção explícita localizada |
+| CA-USR-014 | L — sem menção explícita localizada |
+| CA-USR-015 | L — sem menção explícita localizada |
+| CA-USR-016 | L — sem menção explícita localizada |
+| CA-USR-017 | L — sem menção explícita localizada |
+| CA-USR-018 | L — sem menção explícita localizada |
+| CA-USR-019 | L — sem menção explícita localizada |
+| RF-ARQ-001 | L — sem menção explícita localizada |
+| RF-ARQ-002 | L — sem menção explícita localizada |
+| RF-ARQ-003 | L — sem menção explícita localizada |
+| RF-ARQ-004 | L — sem menção explícita localizada |
+| RF-ARQ-005 | L — sem menção explícita localizada |
+| RF-ARQ-006 | L — sem menção explícita localizada |
+| RF-ARQ-007 | L — sem menção explícita localizada |
+| RF-ARQ-008 | L — sem menção explícita localizada |
+| RF-ARQ-009 | L — sem menção explícita localizada |
+| RF-ARQ-010 | L — sem menção explícita localizada |
+| RF-ARQ-011 | L — sem menção explícita localizada |
+| RF-ARQ-012 | L — sem menção explícita localizada |
+| RF-ARQ-013 | L — sem menção explícita localizada |
+| RF-ARQ-014 | L — sem menção explícita localizada |
+| RF-ARQ-015 | L — sem menção explícita localizada |
+| RF-ARQ-016 | L — sem menção explícita localizada |
+| RF-ARQ-017 | L — sem menção explícita localizada |
+| RF-ARQ-018 | L — sem menção explícita localizada |
+| RF-ARQ-019 | L — sem menção explícita localizada |
+| RF-ARQ-020 | L — sem menção explícita localizada |
+| RF-ARQ-021 | L — sem menção explícita localizada |
+| RF-ARQ-022 | L — sem menção explícita localizada |
+| RF-ARQ-023 | L — sem menção explícita localizada |
+| RF-ARQ-024 | L — sem menção explícita localizada |
+| RF-ARQ-025 | L — sem menção explícita localizada |
+| RF-ARQ-026 | L — sem menção explícita localizada |
+| RF-ARQ-027 | L — sem menção explícita localizada |
+| RF-AUD-001 | [#97](https://github.com/Asa-3/App.cef/issues/97) |
+| RF-AUD-002 | [#97](https://github.com/Asa-3/App.cef/issues/97) |
+| RF-AUD-003 | [#97](https://github.com/Asa-3/App.cef/issues/97) |
+| RF-AUD-004 | [#97](https://github.com/Asa-3/App.cef/issues/97) |
+| RF-AUD-005 | [#97](https://github.com/Asa-3/App.cef/issues/97) |
+| RF-AUD-006 | [#97](https://github.com/Asa-3/App.cef/issues/97) |
+| RF-AUD-007 | [#97](https://github.com/Asa-3/App.cef/issues/97) |
+| RF-AUD-008 | [#97](https://github.com/Asa-3/App.cef/issues/97) |
+| RF-AUD-009 | [#97](https://github.com/Asa-3/App.cef/issues/97) |
+| RF-AUT-001 | [#90](https://github.com/Asa-3/App.cef/issues/90) |
+| RF-AUT-002 | L — sem menção explícita localizada |
+| RF-AUT-003 | L — sem menção explícita localizada |
+| RF-AUT-004 | L — sem menção explícita localizada |
+| RF-AUT-005 | L — sem menção explícita localizada |
+| RF-AUT-006 | L — sem menção explícita localizada |
+| RF-AUT-007 | L — sem menção explícita localizada |
+| RF-AUT-008 | L — sem menção explícita localizada |
+| RF-AUT-009 | L — sem menção explícita localizada |
+| RF-AUT-010 | L — sem menção explícita localizada |
+| RF-AUT-011 | L — sem menção explícita localizada |
+| RF-AUT-012 | L — sem menção explícita localizada |
+| RF-AUT-013 | L — sem menção explícita localizada |
+| RF-AUT-014 | L — sem menção explícita localizada |
+| RF-AUT-015 | L — sem menção explícita localizada |
+| RF-AUT-016 | L — sem menção explícita localizada |
+| RF-AUT-017 | L — sem menção explícita localizada |
+| RF-AUT-018 | L — sem menção explícita localizada |
+| RF-AVI-001 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| RF-AVI-002 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| RF-AVI-003 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| RF-AVI-004 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| RF-AVI-005 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| RF-AVI-006 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| RF-AVI-007 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| RF-AVI-008 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| RF-AVI-009 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| RF-AVI-010 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| RF-AVI-011 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| RF-AVI-012 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| RF-AVI-013 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| RF-AVI-014 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| RF-AVI-015 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| RF-AVI-016 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| RF-CON-001 | L — sem menção explícita localizada |
+| RF-CON-002 | L — sem menção explícita localizada |
+| RF-CON-003 | L — sem menção explícita localizada |
+| RF-CON-004 | L — sem menção explícita localizada |
+| RF-CON-005 | L — sem menção explícita localizada |
+| RF-CVI-001 | L — sem menção explícita localizada |
+| RF-CVI-002 | L — sem menção explícita localizada |
+| RF-CVI-003 | L — sem menção explícita localizada |
+| RF-CVI-004 | L — sem menção explícita localizada |
+| RF-GRP-001 | L — sem menção explícita localizada |
+| RF-GRP-002 | L — sem menção explícita localizada |
+| RF-GRP-003 | L — sem menção explícita localizada |
+| RF-GRP-004 | L — sem menção explícita localizada |
+| RF-GRP-005 | L — sem menção explícita localizada |
+| RF-GRP-006 | L — sem menção explícita localizada |
+| RF-GRP-007 | L — sem menção explícita localizada |
+| RF-GRP-008 | L — sem menção explícita localizada |
+| RF-GRP-009 | L — sem menção explícita localizada |
+| RF-GRP-010 | L — sem menção explícita localizada |
+| RF-GRP-011 | L — sem menção explícita localizada |
+| RF-GRP-012 | L — sem menção explícita localizada |
+| RF-GRP-013 | L — sem menção explícita localizada |
+| RF-GRP-014 | L — sem menção explícita localizada |
+| RF-GRP-015 | L — sem menção explícita localizada |
+| RF-GRP-016 | L — sem menção explícita localizada |
+| RF-GRP-017 | L — sem menção explícita localizada |
+| RF-MSG-001 | L — sem menção explícita localizada |
+| RF-MSG-002 | L — sem menção explícita localizada |
+| RF-MSG-003 | L — sem menção explícita localizada |
+| RF-MSG-004 | L — sem menção explícita localizada |
+| RF-MSG-005 | L — sem menção explícita localizada |
+| RF-MSG-006 | L — sem menção explícita localizada |
+| RF-MSG-007 | L — sem menção explícita localizada |
+| RF-MSG-008 | L — sem menção explícita localizada |
+| RF-MSG-009 | L — sem menção explícita localizada |
+| RF-MSG-010 | L — sem menção explícita localizada |
+| RF-MSG-011 | L — sem menção explícita localizada |
+| RF-MSG-012 | L — sem menção explícita localizada |
+| RF-MSG-013 | L — sem menção explícita localizada |
+| RF-MSG-014 | L — sem menção explícita localizada |
+| RF-NOT-001 | L — sem menção explícita localizada |
+| RF-NOT-002 | L — sem menção explícita localizada |
+| RF-NOT-003 | L — sem menção explícita localizada |
+| RF-NOT-004 | L — sem menção explícita localizada |
+| RF-SINC-001 | L — sem menção explícita localizada |
+| RF-SINC-002 | L — sem menção explícita localizada |
+| RF-SINC-003 | L — sem menção explícita localizada |
+| RF-SINC-004 | L — sem menção explícita localizada |
+| RF-SINC-005 | L — sem menção explícita localizada |
+| RF-SINC-006 | L — sem menção explícita localizada |
+| RF-SINC-007 | L — sem menção explícita localizada |
+| RF-SINC-008 | L — sem menção explícita localizada |
+| RF-SINC-009 | L — sem menção explícita localizada |
+| RF-SINC-010 | L — sem menção explícita localizada |
+| RF-SINC-011 | L — sem menção explícita localizada |
+| RF-SINC-012 | L — sem menção explícita localizada |
+| RF-SINC-013 | L — sem menção explícita localizada |
+| RF-SINC-014 | L — sem menção explícita localizada |
+| RF-SINC-015 | L — sem menção explícita localizada |
+| RF-USR-001 | L — sem menção explícita localizada |
+| RF-USR-002 | L — sem menção explícita localizada |
+| RF-USR-003 | L — sem menção explícita localizada |
+| RF-USR-004 | L — sem menção explícita localizada |
+| RF-USR-005 | L — sem menção explícita localizada |
+| RF-USR-006 | L — sem menção explícita localizada |
+| RF-USR-007 | L — sem menção explícita localizada |
+| RF-USR-008 | L — sem menção explícita localizada |
+| RF-USR-009 | L — sem menção explícita localizada |
+| RF-USR-010 | L — sem menção explícita localizada |
+| RF-USR-011 | L — sem menção explícita localizada |
+| RF-USR-012 | L — sem menção explícita localizada |
+| RF-USR-013 | L — sem menção explícita localizada |
+| RF-USR-014 | L — sem menção explícita localizada |
+| RF-USR-015 | L — sem menção explícita localizada |
+| RF-USR-016 | L — sem menção explícita localizada |
+| RF-USR-017 | L — sem menção explícita localizada |
+| RF-USR-018 | L — sem menção explícita localizada |
+| RF-USR-019 | L — sem menção explícita localizada |
+| RN-ARQ-001 | L — sem menção explícita localizada |
+| RN-ARQ-002 | L — sem menção explícita localizada |
+| RN-ARQ-003 | L — sem menção explícita localizada |
+| RN-ARQ-004 | L — sem menção explícita localizada |
+| RN-ARQ-005 | L — sem menção explícita localizada |
+| RN-ARQ-006 | L — sem menção explícita localizada |
+| RN-AUD-001 | [#97](https://github.com/Asa-3/App.cef/issues/97) |
+| RN-AUD-002 | [#97](https://github.com/Asa-3/App.cef/issues/97) |
+| RN-AUD-003 | [#97](https://github.com/Asa-3/App.cef/issues/97) |
+| RN-AUD-004 | [#97](https://github.com/Asa-3/App.cef/issues/97) |
+| RN-AUD-005 | [#97](https://github.com/Asa-3/App.cef/issues/97) |
+| RN-AUT-001 | [#90](https://github.com/Asa-3/App.cef/issues/90) |
+| RN-AUT-002 | L — sem menção explícita localizada |
+| RN-AUT-003 | L — sem menção explícita localizada |
+| RN-AUT-004 | L — sem menção explícita localizada |
+| RN-AUT-005 | L — sem menção explícita localizada |
+| RN-AUT-006 | L — sem menção explícita localizada |
+| RN-AUT-007 | L — sem menção explícita localizada |
+| RN-AUT-008 | L — sem menção explícita localizada |
+| RN-AUT-009 | L — sem menção explícita localizada |
+| RN-AUT-010 | L — sem menção explícita localizada |
+| RN-AUT-011 | L — sem menção explícita localizada |
+| RN-AUT-012 | L — sem menção explícita localizada |
+| RN-AUT-013 | L — sem menção explícita localizada |
+| RN-AUT-014 | L — sem menção explícita localizada |
+| RN-AUT-015 | L — sem menção explícita localizada |
+| RN-AUT-016 | L — sem menção explícita localizada |
+| RN-AVI-001 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| RN-AVI-002 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| RN-AVI-003 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| RN-AVI-004 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| RN-AVI-005 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| RN-AVI-006 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| RN-AVI-007 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| RN-AVI-008 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| RN-AVI-009 | [#96](https://github.com/Asa-3/App.cef/issues/96) |
+| RN-CON-001 | L — sem menção explícita localizada |
+| RN-CON-002 | L — sem menção explícita localizada |
+| RN-CON-003 | L — sem menção explícita localizada |
+| RN-CVI-001 | L — sem menção explícita localizada |
+| RN-CVI-002 | L — sem menção explícita localizada |
+| RN-CVI-003 | L — sem menção explícita localizada |
+| RN-GRP-001 | L — sem menção explícita localizada |
+| RN-GRP-002 | L — sem menção explícita localizada |
+| RN-GRP-003 | L — sem menção explícita localizada |
+| RN-GRP-004 | L — sem menção explícita localizada |
+| RN-GRP-012 | L — sem menção explícita localizada |
+| RN-GRP-013 | L — sem menção explícita localizada |
+| RN-GRP-014 | L — sem menção explícita localizada |
+| RN-GRP-015 | L — sem menção explícita localizada |
+| RN-GRP-016 | L — sem menção explícita localizada |
+| RN-INF-001 | L — sem menção explícita localizada |
+| RN-INF-002 | L — sem menção explícita localizada |
+| RN-INF-003 | L — sem menção explícita localizada |
+| RN-INF-004 | L — sem menção explícita localizada |
+| RN-INF-005 | L — sem menção explícita localizada |
+| RN-INF-006 | L — sem menção explícita localizada |
+| RN-INF-007 | L — sem menção explícita localizada |
+| RN-MSG-001 | L — sem menção explícita localizada |
+| RN-MSG-002 | L — sem menção explícita localizada |
+| RN-MSG-003 | L — sem menção explícita localizada |
+| RN-MSG-004 | L — sem menção explícita localizada |
+| RN-MSG-005 | L — sem menção explícita localizada |
+| RN-NOT-001 | L — sem menção explícita localizada |
+| RN-NOT-002 | L — sem menção explícita localizada |
+| RN-NOT-003 | L — sem menção explícita localizada |
+| RN-SINC-001 | L — sem menção explícita localizada |
+| RN-SINC-002 | L — sem menção explícita localizada |
+| RN-SINC-003 | L — sem menção explícita localizada |
+| RN-SINC-004 | L — sem menção explícita localizada |
+| RN-SINC-005 | L — sem menção explícita localizada |
+| RN-SINC-006 | L — sem menção explícita localizada |
+| RN-SINC-007 | L — sem menção explícita localizada |
+| RN-USR-001 | L — sem menção explícita localizada |
+| RN-USR-002 | L — sem menção explícita localizada |
+| RN-USR-003 | L — sem menção explícita localizada |
+| RN-USR-004 | L — sem menção explícita localizada |
+| RNF-BKP-008 | [#99](https://github.com/Asa-3/App.cef/issues/99) |
+| RNF-BKP-009 | [#99](https://github.com/Asa-3/App.cef/issues/99) |
+| RNF-BKP-010 | [#99](https://github.com/Asa-3/App.cef/issues/99) |
+| RNF-BKP-011 | [#99](https://github.com/Asa-3/App.cef/issues/99) |
+| RNF-DES-004 | [#101](https://github.com/Asa-3/App.cef/issues/101) |
+| RNF-DISP-005 | L — sem menção explícita localizada |
+| RNF-REC-006 | [#99](https://github.com/Asa-3/App.cef/issues/99) |
+| RNF-REC-007 | [#99](https://github.com/Asa-3/App.cef/issues/99) |
+| RNF-SEG-001 | L — sem menção explícita localizada |
+| RNF-SEG-002 | L — sem menção explícita localizada |
+| RNF-SEG-003 | L — sem menção explícita localizada |
+
+**Resultado:** 413 IDs RF/RN/CA/RNF/CA-NF conferidos; 75 com menção explícita em issue (incluindo intervalos), 338 sem menção localizada. Os vínculos candidatos por módulo continuam disponíveis.
+
+### Bloqueios de encerramento
+
+- Busca no repositório por diagrama, UML, casos de uso, RF-001, RN-001 e test não retornou arquivos. Isso não comprova ausência. PO/equipe devem fornecer caminhos ou arquivos UML e originais legados (issue #105).
+- QA deve fornecer casos de teste reais e evidências; CT-P e cenários reconstruídos não equivalem a execução.
+- PO/QA devem revisar pertinência dos vínculos P; nenhuma aprovação adicional foi presumida.
+
+**Status INC-DOC-003: parcial, com revisão referencial e índice de issues ampliado.**
