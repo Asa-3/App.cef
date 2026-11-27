@@ -1,0 +1,68 @@
+/* Foto no balão */
+.imageButton {
+  display: block;
+  width: min(260px, 64vw);
+  max-height: 340px;
+  margin: -4px -8px 4px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 16px;
+  background: var(--color-field);
+}
+.imageButton:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.imageLoading {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-field) 0%, #e8e9ec 50%, var(--color-field) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s linear infinite;
+}
+@keyframes shimmer {
+  to { background-position: -200% 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .imageLoading { animation: none; }
+}
+.imageError {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  padding: var(--space-4);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  text-align: center;
+}
+
+/* Foto em tela cheia */
+.viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: calc(env(safe-area-inset-top) + 56px) var(--space-2) calc(env(safe-area-inset-bottom) + var(--space-4));
+  background: rgba(0, 0, 0, 0.92);
+}
+.viewerImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+.viewerClose {
+  position: absolute;
+  top: calc(env(safe-area-inset-top) + var(--space-2));
+  right: var(--space-2);
+  display: grid;
+  placֻǱ˞
