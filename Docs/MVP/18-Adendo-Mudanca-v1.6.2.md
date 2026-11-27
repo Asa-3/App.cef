@@ -101,3 +101,23 @@ Reconciliar com os 22 grupos EV-AUT-101 existentes antes de ampliar a contagem o
 - CP-LR125-006: Repetição do processamento de desbloqueio — Não reiniciar novamente.
 - CP-LR125-007: Recuperação com estado e tempo confiáveis — Preservar prazo e eventos confirmados.
 - CP-LR125-008: Recuperação com estado ou tempo não confiável — Impedir autenticações afetadas.
+
+
+## DEC-RAST-M01-016 — Homologação individual pelo PO
+Manifestação integral: “Aprovo integralmente a DEC-RAST-M01-016 revisada, considerando a baseline v1.6.2 publicada e verificada, a resolução normativa das cinco lacunas, a DEC-INT-M01-016-001 aprovada, os vínculos de rastreabilidade apresentados, a classificação Must Have, os 40 registros brutos complementares, os dez invariantes de segurança, os oito grupos complementares de evidências sujeitos à reconciliação e as ressalvas documentais registradas. Preserve o RPO específico de zero segundos, mantenha a LR-AUT-101 aberta com as lacunas LR-AUT-115 e LR-AUT-131 vinculadas e a INC-DOC-003 aberta. Registre a homologação e os vínculos aprovados no GitHub, verifique a atualização e prossiga para o RF-AUT-017.”
+Baseline v1.6.2, commit de publicação dd3ac603c509816a50e1fb30b2425d9b21841f11. RF-AUT-016 homologado documentalmente e em rastreabilidade, Must Have, EP-002, PBI-015 principal. Vínculos bidirecionais aprovados (cada elemento listado remete ao RF-AUT-016):
+| Classe | Elementos |
+|---|---|
+| RN diretas | RN-AUT-004/014 |
+| RN complementares | RN-AUT-005/010/012/013/015/016/017/018/019/020 |
+| RN transversal | RN-ARQ-007 |
+| CA diretos | CA-AUT-016/030 |
+| CA complementares | CA-AUT-006/009/014/015/027/028/029/033/034/035/036/037/038 |
+| CA transversais | CA-ARQ-029/030; CA-NF-012 |
+| RF dependentes | RF-AUT-001/005/006/007/008/009/011/012/013/014/015/017/018/019/020/021/022; RF-USR-002/010; RF-MSG-008/009; RF-ARQ-028/029/030; RF-SINC-015 |
+| RNF | RNF-SEG-001/002/003; RNF-DISP-005; RNF-REC-006/007/012; RNF-BKP-008/009/010/011 |
+| PBIs complementares | PBI-005/006/010/012/014/016/017/036/039/043/044/057/058 |
+| Decisões | DEC-M01-008/009/010; DEC-LR-AUT-091-001/094-001/098-001/099-001; DEC-INT-M01-014-001/002; DEC-INT-M01-015-001/002; DEC-INT-M01-016-001 |
+| Teste de referência | CT-MVP-M01-001 (não evidência de execução) |
+| Issues candidatas não revalidadas | #25/#66/#90/#98/#99/#102 |
+LR-AUT-119/120/121/122/125 resolvidas normativamente no escopo aprovado; LR-AUT-101 aberta com LR-AUT-115/131 vinculadas. RPO crítico zero segundos, geral 24h, RTO 30min. 40 registros brutos, dez invariantes, oito grupos de evidências sujeitos à reconciliação com 22 grupos anteriores; 412 CEN inalterados. INC-DOC-003 aberta. Enunciados originais das seis lacunas não localizados na consulta anterior; escopo aprovado pelo PO prevalece. Tabelas históricas não reconciliadas integralmente. Nenhum teste executado, nenhuma issue ou código alterado. Homologação não tecnológica nem autorização de produção. Inventário preservado 865 elementos, 805 MVP, 60 fora, 143 RF/RNF Must Have, 60 PBIs. Progresso nominal atualizado: 16/22 RF (72,7%), sujeito à revisão de impacto. Próximo RF-AUT-017, ainda não homologado.
