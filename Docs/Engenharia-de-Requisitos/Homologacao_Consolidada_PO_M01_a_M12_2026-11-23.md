@@ -74,3 +74,8 @@ Os arquivos adicionais eventualmente produzidos pela equipe não foram auditados
 **M01 a M12: HOMOLOGADOS PELO PRODUCT OWNER (12/12).**
 
 Este termo registra a aprovação documental e sua rastreabilidade, não o aceite técnico da implementação. A publicação deste novo registro não modifica nem apaga documentos históricos.
+
+
+## Errata documental — 27/11/2026 (INC-DOC-006)
+
+O quadro histórico de homologação registra 20 CA para M05. A conferência dos IDs únicos confirmou 19 (CA-GRP-001 a 011 e CA-GRP-013 a 020), pois CA-GRP-012 foi migrado para CA-GRP-020. Na matriz vigente v1.3.0, o total funcional correto é 166 CA. Esta errata corrige a leitura do inventário histórico sem alterar o quadro original, o conteúdo homologado ou a aprovação de 23/11/2026. Consulte a [matriz vigente](Matriz_Consolidada_Requisitos_v1.3.0.md) e a [rastreabilidade](Matriz_Rastreabilidade_Requisitos_v1.3.0.md).
