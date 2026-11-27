@@ -2302,3 +2302,6 @@ RF-NOT-004, RF-SINC-011, RF-SINC-014, RN-AUD-001 e RN-USR-004: aplicação compa
 ## 12. Homologação individual M01
 ### DEC-RAST-M01-001 — aprovada pelo PO em 27/11/2026
 RF-AUT-001 ↔ RN-AUT-001 ↔ CA-AUT-001; vínculo transversal RF-USR-002 e CA-USR-002, este último sujeito à conferência da cobertura integral da unicidade e permanência. Preservados IDs e enunciados. Aprovação documental não comprova execução. Manifestação: “Aprovo integralmente a DEC-RAST-M01-001. Registre a decisão e prossiga para o RF-AUT-002.”
+
+### DEC-RAST-M01-002 — aprovada pelo PO em 27/11/2026
+RF-AUT-002: RN diretas RN-AUT-006/007; complementares RN-AUT-002/008; CA direto CA-AUT-002; complementares CA-AUT-019/020/021 e CA-USR-003. RF relacionados RF-AUT-003/004 e RF-USR-001/003. Sequência obrigatória preservada. Referências DEC-M01-001/002/003, CON-M01-016, EP-002/PBI-011 sujeitas à revisão nas etapas próprias. LR-AUT-001 cobertura da sequência complementada por CA-AUT-019; LR-AUT-002 política de senha associada; LR-AUT-003 rejeição da senha inicial após substituição a verificar pelo QA. IDs e enunciados preservados. Manifestação: “Aprovo integralmente a DEC-RAST-M01-002. Registre a decisão e prossiga para o RF-AUT-003.”
